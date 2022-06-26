@@ -1,36 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <script src="app.js"></script>
-    <title>Tic Tac Toe</title>
-</head>
-<body>
+    <title>Tic Tac Toe - 2 Players</title>
+  </head>
+  <body>
     <h1>Tic Tac Toe</h1>
-    <div id="message">messages here</div>
-
-    <div class="rows">
-        <div id="one" class="box"></div>
-        <div id="two" class="box"></div>
-        <div id="three" class="box"></div>
+    
+    <div class="names">
+        <h2 id="player1"></h2>
+        <h2 id="player2"></h2>
     </div>
 
-    <div class="rows">
-        <div id="four" class="box"></div>
-        <div id="five" class="box"></div>
-        <div id="six" class="box"></div>
+    <label for="p1">Player 1:</label>
+  <input type="text" id="ip1">
+  <br>
+  <label for="p2">Player 2:</label>
+  <input type="text" id="ip2">
+  <br>
+  <input type="submit" value="Submit" onclick="onNameSubmit();">
+
+
+    <div class="board" id="board">
+      <div class="row">
+        <div class="cell" id="one" onclick="move(this);"></div>
+        <div class="cell" id="two" onclick="move(this);"></div>
+        <div class="cell" id="three" onclick="move(this);"></div>
+      </div>
+      <div class="row">
+        <div class="cell" id="four" onclick="move(this);"></div>
+        <div class="cell" id="five" onclick="move(this);"></div>
+        <div class="cell" id="six" onclick="move(this);"></div>
+      </div>
+      <div class="row">
+        <div class="cell" id="seven" onclick="move(this);"></div>
+        <div class="cell" id="eight" onclick="move(this);"></div>
+        <div class="cell" id="nine" onclick="move(this);"></div>
+      </div>
     </div>
-        
-    <div class="rows">
-        <div id="seven" class="box"></div>
-        <div id="eight" class="box"></div>
-        <div id="nine" class="box"></div>
+
+    <div id="restart">
+      <a href="#" onclick="reset();">Restart</a>
     </div>
-        
-    
-    
-</body>
+
+    <div id="switchGameMode">
+      <a href="#" onclick="switchGameMode();">Switch Game Mode</a>
+    </div>
+  </body>
 </html>
