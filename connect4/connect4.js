@@ -94,7 +94,6 @@ const gameStatusCheck = (cell) => {
   if (!color) return;
   const [rowIndex, colIndex] = cellLocation(cell);
 
-  // Check horizontally
   let winningCells = [cell];
   let rowCheck = rowIndex;
   let colCheck = colIndex - 1;
@@ -120,8 +119,6 @@ const gameStatusCheck = (cell) => {
   let isWinningCombo = winCheck(winningCells);
   if (isWinningCombo) return;
 
-
-  // Check vertically
   winningCells = [cell];
   rowCheck = rowIndex - 1;
   colCheck = colIndex;
@@ -147,8 +144,6 @@ const gameStatusCheck = (cell) => {
   isWinningCombo = winCheck(winningCells);
   if (isWinningCombo) return;
 
-
-  // Check diagonally /
   winningCells = [cell];
   rowCheck = rowIndex + 1;
   colCheck = colIndex - 1;
@@ -178,7 +173,6 @@ const gameStatusCheck = (cell) => {
   if (isWinningCombo) return;
 
 
-  // Check diagonally \
   winningCells = [cell];
   rowCheck = rowIndex - 1;
   colCheck = colIndex - 1;
@@ -207,7 +201,6 @@ const gameStatusCheck = (cell) => {
   isWinningCombo = winCheck(winningCells);
   if (isWinningCombo) return;
 
-  // Check to see if we have a tie
   const rowsWithoutTop = rows.slice(0, 6);
   for (const row of rowsWithoutTop) {
     for (const cell of row) {
@@ -224,8 +217,6 @@ const gameStatusCheck = (cell) => {
 };
 
 
-
-// Event Handlers
 const handleCellMouseOver = (e) => {
   if (!gameStatus
 ) return;
