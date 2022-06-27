@@ -1,0 +1,26 @@
+.board {
+    display: flex;
+    align-items: center;
+}
+
+.mancalaZone {
+    height: 100px;
+    width: 75px;
+    border: 10px blue solid;
+}
+
+.player1Zone {
+    display: flex;
+    flex-direction: row;
+}
+
+.player2Zone {
+    display: flex;
+    flex-direction: row;
+}
+
+.cell {
+    height: 50px;
+    width: 50px;
+    border: 10px red solid;
+}
